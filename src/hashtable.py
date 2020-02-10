@@ -150,45 +150,29 @@ class HashTable:
 
 
 if __name__ == "__main__":
-    # ht = HashTable(2)
+    ht = HashTable(2)
 
-    # ht.insert("line_1", "Tiny hash table")
-    # ht.insert("line_2", "Filled beyond capacity")
-    # ht.insert("line_3", "Linked list saves the day!")
+    ht.insert("line_1", "Tiny hash table")
+    ht.insert("line_2", "Filled beyond capacity")
+    ht.insert("line_3", "Linked list saves the day!")
 
 
-    # # Test storing beyond capacity
-    # print(ht.retrieve("line_1"))
-    # print(ht.retrieve("line_2"))
-    # print(ht.retrieve("line_3"))
+    # Test storing beyond capacity
+    print(ht.retrieve("line_1"))
+    print(ht.retrieve("line_2"))
+    print(ht.retrieve("line_3"))
 
-    # print("")
-    # # Test resizing
-    # old_capacity = len(ht.storage)
-    # ht.resize()
-    # new_capacity = len(ht.storage)
+    print("")
+    # Test resizing
+    old_capacity = len(ht.storage)
+    ht.resize()
+    new_capacity = len(ht.storage)
 
-    # print(f"\nResized from {old_capacity} to {new_capacity}.\n")
+    print(f"\nResized from {old_capacity} to {new_capacity}.\n")
 
-    # # Test if data intact after resizing
-    # print(ht.retrieve("line_1"))
-    # print(ht.retrieve("line_2"))
-    # print(ht.retrieve("line_3"))
+    # Test if data intact after resizing
+    print(ht.retrieve("line_1"))
+    print(ht.retrieve("line_2"))
+    print(ht.retrieve("line_3"))
 
-    # print("")
-
-        ht = HashTable(8)
-
-        ht.insert("key-0", "val-0")
-        ht.insert("key-1", "val-1")
-        ht.insert("key-2", "val-2")
-        ht.insert("key-3", "val-3")
-        ht.insert("key-4", "val-4")
-        ht.insert("key-5", "val-5")
-        ht.insert("key-6", "val-6")
-        ht.insert("key-7", "val-7")
-        ht.insert("key-8", "val-8")
-        ht.insert("key-9", "val-9")
-        print(ht)
-        ht.resize()
-        print(ht)
+    print("")
