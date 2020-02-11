@@ -69,8 +69,19 @@ class HashTable:
         hash=self._hash_mod(key)
         new_pair=LinkedPair(key,value)
         if self.storage[hash] != None:
-            new_pair.next=self.storage[hash]
-        self.storage[hash]=new_pair
+            curr=self.storage[hash]
+            while True:
+                if curr.key==key:
+                    curr.value=value
+                    break
+                if curr.next != None:
+                    curr=curr.next
+                else:
+                    new_pair.next=self.storage[hash]
+                    self.storage[hash]=new_pair
+                    break
+        else:
+            self.storage[hash]=new_pair
         return new_pair
 
     def remove(self, key):
